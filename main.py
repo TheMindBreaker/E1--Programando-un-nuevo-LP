@@ -38,6 +38,7 @@ def patternSplit(line):
     line = line.replace("(", " ( ")
     line = line.replace(")", " ) ")
     line = line.replace("==", "@")
+    
     #Splitting Base on Pattern
     splitting = regex.findall(real_pat + "|" + var_pat + "|" + comment_pat + "|" + operand_pat + "|" + parent_pat + "|" + compare_pat,line)
 
