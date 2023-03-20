@@ -5,7 +5,7 @@
 This program takes a file name and generates a table identifing it's tokens and types.
 In Case their is any error of usage, it will show a list of errors at the end of each table.
 
-#Diagram
+# Diagram
 ![Image](diagram.png)
 
 ## Installation
