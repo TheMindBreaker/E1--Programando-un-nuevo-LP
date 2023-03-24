@@ -1,3 +1,4 @@
+d4 = 45(*38)^3
 d3 == 45(/38)^3
 //Ejemplos de prueba
 

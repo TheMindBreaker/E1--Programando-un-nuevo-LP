@@ -85,12 +85,16 @@ def operandRuller(value, line):
     result = []
     error = ""
     pos = line.index(value)
+
+    #Detect Side Vars or Reals
     if(regex.match(comment_pat, line[pos + 1]) or regex.match(operand_pat, line[pos + 1])):
         #Exclude some failed to detec regex
         if(regex.match(real_pat,line[pos + 1])):
-            error = ""
+            error += ""
         else:
-            error = "Error: Falta valor valido despues del operador "
+            error += "Error: Falta valor valido despues del operador "
+    
+
 
     #Check Operation Type
     match value:
@@ -114,6 +118,6 @@ if(len(sys.argv) == 2):
     if regex.match(r'.*\.txt',sys.argv[1]):
         lexerAritmetico(sys.argv[1])
     else:
-        print("Error: File format is not correct, it should be txt format")
+        print("Error: File format is not correct, it should be txt format :" + sys.argv[1])
 else:
-    print("Error: Missing File Name    python main.py  filename.txt")
+    print("Error: Missing File Name    python main.py  filename.txt :" + sys.argv[1])
